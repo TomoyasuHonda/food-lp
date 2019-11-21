@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~オシャレなカフェ~</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="js-header">
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="">top</a></li>
+        <li><a href="#menu">menu</a></li>
+        <li><a href="#info">about</a></li>
+        <li><a href="#careers">careers</a></li>
+        <li><a href="#blog">blog</a></li>
+      </ul>
+      <div class="span js-span">
+        <span class="border"></span>
+        <span class="border"></span>
+        <span class="border"></span>
+      </div>
+
+    </nav>
+    <h1 id="hh">Here is what you like</h1>
+  </header>
+  <main>
+    <section id="concept">
+      <div class="concept">
+        <p class="on_large_font"><span class="large_font">01</span>〜コンセプト〜<br><span class="large_font">CONCEPT</span></p>
+        <p class="concept_letter">本格的なアメリカンをベースにしつつも<br>お洒落で楽しめる空間を提供しています。<br>飲み会、デート、商談、パーティなど様々なシーンに応じてご利用いただけます。</p>
+      </div>
+    </section>
+
+    <div class="font-black">
+      <h2>本当に美味しい<span>野菜</span>、食べてますか？</h2>
+      <p>ご用意するお料理は、ただ味にこだわるだけではありません。<br>
+地元の契約農家から仕入れる野菜をはじめ、お肉や魚、小麦粉まで選び抜いた食材の数々を使用し、<br>
+心も身体も笑顔になれる、そんなお食事を取り揃えました。</p>
+      <img src="https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+      <img src="https://images.pexels.com/photos/1213859/pexels-photo-1213859.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+    </div>
+    <section id="menu">
+      <div class="menu">
+        <p class="on_large_font"><span class="large_font">02</span>〜メニュー〜<br><span class="large_font">MENU</span></p>
+        <div class="menu3">
+          <div class="morning"><span>Morning</span></div>
+          <div class="lunch"><span>Lunch</span></div>
+          <div class="dinner"><span>Dinner</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info">
+      <div class="info">
+        <p class="on_large_font"><span class="large_font">03</span>〜店舗情報〜<br><span class="large_font">ABOUT</span></p>
+        <table>
+          <tr><th>営業時間</th><td>7時〜23時まで</td></tr>
+          <tr><th> TEL</th><td>999-9999</td></tr>
+          <tr><th>E-mail</th><td>info@webukatu.com</td></tr>
+          <tr><th>駐車場</th><td>10台程度</td></tr>
+          <tr><th>住所</th><td>東京都〇〇区</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <div class="font-black2">
+      <h2>すべての個性を、<span>力</span>に変える</h2>
+      <p>ひとりの想いがお客様を動かす。ひとりの粘りがビジネスを広げる。<br>
+ひとりのアイデアがまったく新しいサービスを生み出すこともある。<br>
+君が挑戦できるフィールドは多彩だ。<br>
+さあ、すべての期待を超えていけ。</p>
+
+    </div>
+
+    <section id="careers">
+      <div class="careers">
+        <p class="on_large_font"><span class="large_font">04</span>〜採用情報〜<br><span class="large_font">CAREERS</span></p>
+        <table class="table">
+          <tr><th>募集職業</th><td>キッチンスタッフ、店長候補</td></tr>
+          <tr><th>給料</th><td>キッチンスタッフ: 200,000<br>店長候補: 250,000</td></tr>
+          <tr><th>昇給</th><td>年１回</td></tr>
+          <tr><th>福利厚生</th><td>各種社会保険完備</td></tr>
+          <tr><th>選考方法</th><td>書類選考・面接</td></tr>
+          <tr><th>月間休日</th><td>６回〜９回</td></tr>
+        </table>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <p>All right reserve 2019~</p>
+  </footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+  <script>
+
+
+
+  $('.js-span').on('click', function(){
+    $('.nav-menu').removeClass('not-active');
+    $('.nav-menu').addClass('active');
+    $('.js-span span').eq(0).addClass('border1');
+    $('.js-span span').eq(1).addClass('border2');
+    $('.js-span span').eq(2).addClass('border3');
+    $('.js-span').addClass('active');
+  });
+
+  // $('.js-span.active').on('click', function(){
+  //   $(this).removeClass('active');
+  //  $('.js-span span').eq(0).removeClass('border1');
+  //  $('.js-span span').eq(1).removeClass('border2');
+  //   $('.js-span span').eq(2).removeClass('border3');
+  //  $('.nav-menu').removeClass('active');
+  //  $('.nav-menu').addClass('not-active');
+  // });
+
+  $(window).scroll(function(){
+    var $scroll = $('#concept').offset().top;
+    if ($(this).scrollTop() < $scroll) {
+      $('ul.nav-menu').css('background', 'rgba(255, 255, 255, 0.7)');
+    } else {
+      $('ul.nav-menu').css('background', 'rgba(255, 255, 255, 0.3)');
+    }
+  })
+
+
+  $(window).click(function() {
+
+    $('.js-span').on('click', function(){
+      $('.nav-menu').removeClass('not-active');
+      $('.nav-menu').addClass('active');
+      $('.js-span span').eq(0).addClass('border1');
+      $('.js-span span').eq(1).addClass('border2');
+      $('.js-span span').eq(2).addClass('border3');
+      $('.js-span').addClass('active');
+    });
+
+    $('.js-span.active').on('click', function(){
+      $(this).removeClass('active');
+     $('.js-span span').eq(0).removeClass('border1');
+     $('.js-span span').eq(1).removeClass('border2');
+      $('.js-span span').eq(2).removeClass('border3');
+     $('.nav-menu').removeClass('active');
+     $('.nav-menu').addClass('not-active');
+    });
+
+    $('.nav-menu a').on('click', function(){
+      $(this).removeClass('active');
+     $('.js-span span').eq(0).removeClass('border1');
+     $('.js-span span').eq(1).removeClass('border2');
+      $('.js-span span').eq(2).removeClass('border3');
+     $('.nav-menu').removeClass('active');
+     $('.nav-menu').addClass('not-active');
+    })
+
+
+});
+
+
+
+  </script>
+</body>
+</html>
